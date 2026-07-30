@@ -1,0 +1,179 @@
+/* Arrière-plan identique */
+.upload-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Carte blanche identique */
+.upload-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03), 0 4px 12px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  max-width: 450px;
+}
+
+h2 {
+  color: #1e293b;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 0 28px 0;
+}
+
+/* Structure des formulaires */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Style de l'input texte identique à l'email/mot de passe */
+.input-text {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #eff6ff; /* Bleu très clair de vos inputs */
+  color: #1e293b;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-text:focus {
+  border-color: #3b82f6;
+}
+
+/* Style personnalisé de l'input fichier (pour garder le design bleu clair) */
+.file-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.file-custom-button {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #eff6ff;
+  color: #64748b;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.file-name {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+/* Bouton principal "Se connecter" style */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background-color: #3490dc; /* Bleu de votre bouton */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #2779bd;
+}
+
+.btn-primary:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Séparateur */
+.divider {
+  height: 1px;
+  background-color: #f1f5f9;
+  margin: 30px 0;
+}
+
+/* Section annulation */
+.cancel-section h3 {
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+}
+
+.btn-danger {
+  width: 100%;
+  padding: 12px;
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+.btn-danger:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Notifications simples */
+.status-box {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.status-box.success {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.status-box.error {
+  background-color: #fef2f2;
+  color: #dc2626;
+}

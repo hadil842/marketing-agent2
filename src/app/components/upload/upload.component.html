@@ -1,0 +1,62 @@
+<div class="upload-wrapper">
+  <div class="upload-card">
+    <h2>Agent Marketing</h2>
+    <p class="subtitle">Importer vos fichiers de prospection</p>
+
+    <!-- Section Importation -->
+    <form (ngSubmit)="onUpload()">
+      <div class="form-group">
+        <label for="fileInput">Sélectionner un fichier Excel (.xlsx)</label>
+        <div class="file-select-container">
+          <input 
+            type="file" 
+            id="fileInput" 
+            (change)="onFileSelected($event)" 
+            accept=".xlsx, .xls"
+            class="file-input"
+          >
+          <div class="file-custom-button">
+            <span *ngIf="!selectedFile">Choisir un fichier...</span>
+            <span *ngIf="selectedFile" class="file-name">{{ selectedFile.name }}</span>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary" [disabled]="!selectedFile || isUploading">
+        <span *ngIf="!isUploading">Envoyer à l'Agent</span>
+        <span *ngIf="isUploading">Traitement...</span>
+      </button>
+    </form>
+
+    <!-- Séparateur discret -->
+    <div class="divider"></div>
+
+    <!-- Section Annulation -->
+    <div class="cancel-section">
+      <h3>Annuler une campagne</h3>
+      <div class="form-group">
+        <label for="cancelEmail">Adresse Email du client</label>
+        <input 
+          type="email" 
+          id="cancelEmail"
+          [(ngModel)]="cancelEmail" 
+          placeholder="client@email.com" 
+          class="input-text"
+        >
+      </div>
+      <button (click)="onCancelJob()" class="btn-danger" [disabled]="!cancelEmail || isCancelling">
+        <span *ngIf="!isCancelling">Annuler la campagne</span>
+        <span *ngIf="isCancelling">Annulation...</span>
+      </button>
+    </div>
+
+    <!-- Notifications d'état -->
+    <div *ngIf="successMessage" class="status-box success">
+      {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="status-box error">
+      {{ errorMessage }}
+    </div>
+
+  </div>
+</div>

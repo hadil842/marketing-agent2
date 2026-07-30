@@ -1,0 +1,150 @@
+/* Conteneur principal */
+.dashboard-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03), 0 4px 12px rgba(0, 0, 0, 0.02);
+  border: 1px solid #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* En-tête du tableau de bord */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dashboard-header h1 {
+  color: #1e293b;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.dashboard-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Bouton principal "Importer" (Style identique au bouton Se connecter) */
+.dashboard-header button {
+  padding: 12px 20px;
+  background-color: #3490dc;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.dashboard-header button:hover {
+  background-color: #2779bd;
+}
+
+.dashboard-header button:active {
+  transform: scale(0.98);
+}
+
+/* Structure du tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+th {
+  background-color: #f8fafc;
+  color: #64748b;
+  padding: 16px 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #e2e8f0;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  vertical-align: middle;
+}
+
+tr:hover td {
+  background-color: #f8fafc; /* Effet de survol discret sur les lignes */
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Cellules spécifiques */
+td:first-child {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Bouton d'action "Annuler" dans le tableau (Style danger discret) */
+td button {
+  padding: 8px 14px;
+  background-color: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+td button:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+}
+
+.row-annule {
+  background-color: #f3f3f3;
+  color: #999;
+}
+
+.row-annule td {
+  color: #999;
+}
+
+.row-annule button {
+  background-color: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* États de chargement et listes vides */
+div[ng-reflect-ng-if] {
+  text-align: center;
+  color: #64748b;
+  padding: 40px 0;
+  font-size: 15px;
+}
+
+/* Boîte d'erreur */
+.error {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fee2e2;
+  padding: 14px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
