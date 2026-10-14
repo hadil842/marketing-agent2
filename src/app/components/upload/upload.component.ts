@@ -30,7 +30,8 @@ export class UploadComponent {
       this.successMessage = '';
     }
   }
-
+  goToDash(): void {
+    this.router.navigate(['/dashboard'];}
   // Envoie le fichier Excel à FastAPI
   onUpload(): void {
     if (!this.selectedFile) {
