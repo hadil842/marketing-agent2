@@ -113,6 +113,10 @@ label {
   transition: background-color 0.2s;
 }
 
+.dashboard-button {
+  margin-top: 20px;
+}
+
 .btn-primary:hover:not(:disabled) {
   background-color: #2779bd;
 }

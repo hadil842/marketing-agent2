@@ -17,7 +17,7 @@ export class UploadComponent {
   isCancelling: boolean = false;
   successMessage: string = '';
   errorMessage: string = '';
-  cancelEmail: string = ''; 
+  cancelEmail: string = '';
 
   constructor(private apiService: ApiService, private router: Router) {}
 
@@ -31,7 +31,7 @@ export class UploadComponent {
     }
   }
   goToDash(): void {
-    this.router.navigate(['/dashboard'];}
+    this.router.navigate(['/dashboard']);}
   // Envoie le fichier Excel à FastAPI
   onUpload(): void {
     if (!this.selectedFile) {
@@ -48,7 +48,7 @@ export class UploadComponent {
         this.isUploading = false;
         this.successMessage = "Fichier traité avec succès par l'agent !";
         this.selectedFile = null;
-        
+
         // Redirection automatique vers le dashboard après 2 secondes
         setTimeout(() => this.router.navigate(['/dashboard']), 2000);
       },

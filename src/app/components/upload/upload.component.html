@@ -8,10 +8,10 @@
       <div class="form-group">
         <label for="fileInput">Select an Excel file (.xlsx)</label>
         <div class="file-select-container">
-          <input 
-            type="file" 
-            id="fileInput" 
-            (change)="onFileSelected($event)" 
+          <input
+            type="file"
+            id="fileInput"
+            (change)="onFileSelected($event)"
             accept=".xlsx, .xls"
             class="file-input"
           >
@@ -26,6 +26,7 @@
         <span *ngIf="!isUploading">Send</span>
         <span *ngIf="isUploading">Loading ...</span>
       </button>
+
     </form>
 
     <!-- Séparateur discret -->
@@ -36,11 +37,11 @@
       <h3>Cancel a company</h3>
       <div class="form-group">
         <label for="cancelEmail">Client Email Adress</label>
-        <input 
-          type="email" 
+        <input
+          type="email"
           id="cancelEmail"
-          [(ngModel)]="cancelEmail" 
-          placeholder="client@email.com" 
+          [(ngModel)]="cancelEmail"
+          placeholder="client@email.com"
           class="input-text"
         >
       </div>
@@ -57,6 +58,8 @@
     <div *ngIf="errorMessage" class="status-box error">
       {{ errorMessage }}
     </div>
-
+    <button type="button" class="btn-primary dashboard-button" (click)="goToDash()">
+        Go to Dashboard
+      </button>
   </div>
 </div>
