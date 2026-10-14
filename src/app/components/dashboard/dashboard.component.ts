@@ -59,7 +59,8 @@ export class DashboardComponent implements OnInit {
   goToUpload(): void {
     this.router.navigate(['/upload']);
   }
-
+   goToUpload(): void {
+    this.router.navigate(['/dashboard'];}
  // Annule TOUT le planning du client (ex: bouton global en haut de la campagne)
 cancelCampaign(emailclient: string): void {
   this.apiService.cancelJob(emailclient).subscribe({
